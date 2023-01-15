@@ -18,7 +18,7 @@ jobs:
       ${{ secrets.SECRET_KEY }} && \
       aws configure set default.region \
       ${{ secrets.AWS_REGION }}"
-      name: Prepare files
+    - name: Prepare files
       run: "mkdir send && \
       cp index.html game.js send/"
     - name: Deploy to S3
