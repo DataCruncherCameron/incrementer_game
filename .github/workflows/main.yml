@@ -18,5 +18,8 @@ jobs:
       ${{ secrets.SECRET_KEY }} && \
       aws configure set default.region \
       ${{ secrets.AWS_REGION }}"
+      name: Prepare files
+      run: "mkdir send && \
+      cp index.html game.js send/"
     - name: Deploy to S3
-      run: aws s3 sync . s3://cam-mac-mac-cam-glue-bucket/ --delete
+      run: aws s3 sync send/ s3://cam-mac-mac-cam-glue-bucket/ --delete
