@@ -4,7 +4,7 @@ on:
   push:
     branches:
     - main
-
+# not sure what region to use. 
 jobs:
   deploy:
     runs-on: ubuntu-latest
