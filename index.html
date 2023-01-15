@@ -1,18 +1,18 @@
 <html>
   <head>
-    <title>Incrementor Game</title>
+    <title>Incrementor Game </title>
   </head>
   <body>
-    <h1>Incrementor Game</h1>
+    <h1 style = "text-align: center;">Incrementor Game</h1>
     <div class = 'grid-container'>
       <div class = 'grid-item'>
         <p>Click the button to increment wood:</p>
-        <button id="increment-button">Increment</button>
+        <button id="increment-button">Gather Wood</button>
         <p id="wood_number">Wood: 0</p>
       </div>
       <div class = 'grid-item'>
         <p>Click the button to increase wood skill:</p>
-        <button id="skill-increment-button">Update Skill</button>
+        <button id="skill-increment-button">Increase Skill</button>
         <p id="skill_number">Skill: 5</p>
       </div>
     </div>
@@ -21,23 +21,25 @@
 
     <style>
           body {
-        font-size: 16px;
+        font-size: 30px;
     }
 
     button {
       padding: 10px;
-      font-size: 20px;
+      font-size: 30px;
       font-style: oblique;
       background-color: #ffffffba;
     color: rgb(4, 4, 4);
     border-radius: 5px;
     border-width: 1px;
+    width :20pc;
+    height: 10pc;
 
     }
 
     @media screen and (max-width: 600px) {
         body {
-            font-size: 14px;
+            font-size: 30px;
         }
     }
     .grid-container {
