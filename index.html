@@ -4,12 +4,18 @@
   </head>
   <body>
     <h1>Incrementor Game</h1>
-    <p>Click the button to increment wood:</p>
-    <button id="increment-button">Increment</button>
-    <p id="wood_number">Wood: 0</p>
-    <p>Click the button to increase wood skill:</p>
-    <button id="skill-increment-button">Update Skill</button>
-    <p id="skill_number">Skill: 5</p>
+    <div class = 'grid-container'>
+      <div class = 'grid-item'>
+        <p>Click the button to increment wood:</p>
+        <button id="increment-button">Increment</button>
+        <p id="wood_number">Wood: 0</p>
+      </div>
+      <div class = 'grid-item'>
+        <p>Click the button to increase wood skill:</p>
+        <button id="skill-increment-button">Update Skill</button>
+        <p id="skill_number">Skill: 5</p>
+      </div>
+    </div>
 
     <script src = 'game.js'></script>
 
@@ -21,6 +27,17 @@
         body {
             font-size: 14px;
         }
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Only one column */
+        grid-template-rows: repeat(2, 1fr); /* Two rows */
+        grid-gap: 10px;
+    }
+    .grid-item {
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        text-align: center;
     }
     </style>
   </body>
