@@ -1,22 +1,28 @@
 <html>
   <head>
-    <title>Incrementor Game </title>
+    <title>Impress Superiors </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   </head>
   <body>
-    <h1 style = "text-align: center;">Incrementor Game</h1>
+    <h1 style = "text-align: center;">Impress Superiors</h1>
+
+
+    <canvas id="progressbar"></canvas>
+
+
+
     <div class = 'grid-container'>
       <div class = 'grid-item'>
-        <p>Click the button to increment wood  (costs 30 wood):</p>
-        <button id="increment-button">Gather Wood</button>
-        <p id="wood_number">Wood: 0</p>
+        <p>Click to complete paperwork:</p>
+        <button id="increment-button">Complete paperwork</button>
+        <p id="paperwork_number">Completed paperwork: </p>
       </div>
       <div class = 'grid-item'>
-        <p>Click the button to increase wood skill:</p>
-        <button id="skill-increment-button">Increase Skill</button>
-        <p id="skill_number">Skill: 5</p>
+        <p>Complete Hire request:</p>
+        <button id="hire_request-increment-button">Complete Hire Request</button>
+        <p id="hire_request_number">Active Hire requests: 0</p>
       </div>
-      <div id = 'bulkbuy-skill' class ='grid-item'></div>
+      <div id = 'bulkbuy-hire_request' class ='grid-item'></div>
     </div>
 
     <script src = 'game.js'></script>
