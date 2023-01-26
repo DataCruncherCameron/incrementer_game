@@ -1,7 +1,7 @@
     // Paperwork related elements
     const paperwork_completing_button = document.getElementById("increment-button");
     const paperwork_value_p = document.getElementById("paperwork_number");
-    
+    const paperwork_goal_p = document.getElementById('paperwork_goal')
     // Hire request related elements 
     const hire_request_button = document.getElementById("hire_request-increment-button")
     const hire_request_number = document.getElementById("hire_request_number")
@@ -16,6 +16,18 @@
     const progressbar_canvas = document.getElementById("progressbar")
     var progressbar_ctx = progressbar_canvas.getContext("2d")
 
+    event_list = [
+        '', 
+        'Working to impress a superior',
+        'Working to impress a superior',
+        'Fill out a personal reflection', 
+        'Working to impress a superior',
+        'Fill out feedback request', 
+        'Request a holiday',
+        ''
+    ]
+
+
     function updateProgress(numerator, denominator)
     {
         let rect_y =0.05 * progressbar_canvas.height;
@@ -28,14 +40,6 @@
         progressbar_ctx.fillRect(rect_x, rect_y, (numerator/denominator)*rect_width, rect_height)
         progressbar_ctx.stroke();
     }
-        function updateProgress_1(numerator, denominator)
-    {
-        progressbar_ctx.clearRect(0,0, progressbar_canvas.width, progressbar_canvas.height);
-        progressbar_ctx.beginPath();
-        progressbar_ctx.arc(50,50,40,0,2 * Math.PI * (numerator/denominator))
-        progressbar_ctx.stroke();
-    }
-
 
     var hire_request_milestone = true
     function generateRandomNumber(score, hire_request) {
@@ -47,6 +51,7 @@
 
       // Set the initial number
     let count = 0;
+    event_number = 0;
 
       // Add an event listener to the button to increment the number
     paperwork_completing_button.addEventListener("click", () => {
@@ -58,6 +63,8 @@
         if (count == paperwork_milestone){
                 old_paperwork_milestone = paperwork_milestone;
                 paperwork_milestone=Math.ceil(2*paperwork_milestone)
+                event_number ++
+                paperwork_goal_p.innerHTML = `Click to complete paperwork\n${'('+event_list[event_number]+')'}`
                 
             }
 
